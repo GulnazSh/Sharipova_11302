@@ -1,8 +1,5 @@
 import java.util.Scanner;
 
-/**
- * Created by ABC on 21.10.14.
- */
 public class CheckUser {
     private String currentLogin;
     private String currentPassword;
