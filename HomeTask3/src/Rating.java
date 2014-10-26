@@ -25,8 +25,8 @@ public class Rating {
                 boolean f = true;
                 while (flag) {
                     String e = String.valueOf((char) reader.read());
-                    if (!e.equals(" ") && !e.equals("\n")&& !e.equals("\r")) { // проверка на пробел, перенос строки и начала строки
-                        temp += e; //запись буквы
+                    if (!e.equals(" ") && !e.equals("\n")&& !e.equals("\r")) {
+                        temp += e;
                         f = false;
                     } else {
                         if (!f)
@@ -37,10 +37,10 @@ public class Rating {
                         flag = false;
                 }
 
-                if (temp.length() > 3) { //если больше трех, проверка
-                    if (!words.containsKey(temp)) { //проверка на совпадение
-                        Word w = new Word(temp); // создание нов слово
-                        words.put(temp, w); //добавляется в мап
+                if (temp.length() > 3) {
+                    if (!words.containsKey(temp)) {
+                        Word w = new Word(temp);
+                        words.put(temp, w);
                     } else {
                         Word w = words.get(temp);
                         w.count();
@@ -75,7 +75,7 @@ public class Rating {
             Random random = new Random();
 
             for (int i = 0; i < 1000; i++)
-                writer.write(s[random.nextInt(s.length-1)] + " "); //рандомно случайно 4 числа
+                writer.write(s[random.nextInt(s.length-1)] + " ");
             writer.close();
         } catch (IOException e) {
             e.printStackTrace();
